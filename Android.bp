@@ -37,6 +37,72 @@ license {
     ],
 }
 
+rust_test {
+    name: "hashlink_test_src_lib",
+    host_supported: true,
+    crate_name: "hashlink",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.7.0",
+    srcs: ["src/lib.rs"],
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    test_options: {
+        unit_test: true,
+    },
+    edition: "2018",
+    rustlibs: [
+        "libfxhash",
+        "libhashbrown",
+        "libserde_test",
+    ],
+}
+
+rust_defaults {
+    name: "hashlink_test_defaults",
+    crate_name: "hashlink",
+    cargo_env_compat: true,
+    cargo_pkg_version: "0.7.0",
+    test_suites: ["general-tests"],
+    auto_gen_config: true,
+    edition: "2018",
+    rustlibs: [
+        "libfxhash",
+        "libhashbrown",
+        "libhashlink",
+        "libserde_test",
+    ],
+}
+
+rust_test {
+    name: "hashlink_test_tests_linked_hash_map",
+    defaults: ["hashlink_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/linked_hash_map.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "hashlink_test_tests_linked_hash_set",
+    defaults: ["hashlink_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/linked_hash_set.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
+rust_test {
+    name: "hashlink_test_tests_lru_cache",
+    defaults: ["hashlink_test_defaults"],
+    host_supported: true,
+    srcs: ["tests/lru_cache.rs"],
+    test_options: {
+        unit_test: true,
+    },
+}
+
 rust_library {
     name: "libhashlink",
     host_supported: true,
@@ -47,5 +113,9 @@ rust_library {
     edition: "2018",
     rustlibs: [
         "libhashbrown",
+    ],
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
     ],
 }
