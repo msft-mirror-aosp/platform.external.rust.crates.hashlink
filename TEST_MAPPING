@@ -2,6 +2,21 @@
 {
   "presubmit": [
     {
+      "name": "hashlink_test_src_lib"
+    },
+    {
+      "name": "hashlink_test_tests_linked_hash_map"
+    },
+    {
+      "name": "hashlink_test_tests_linked_hash_set"
+    },
+    {
+      "name": "hashlink_test_tests_lru_cache"
+    },
+    {
+      "name": "keystore2_legacy_blobs_test"
+    },
+    {
       "name": "keystore2_test"
     },
     {
@@ -9,6 +24,21 @@
     }
   ],
   "presubmit-rust": [
+    {
+      "name": "hashlink_test_src_lib"
+    },
+    {
+      "name": "hashlink_test_tests_linked_hash_map"
+    },
+    {
+      "name": "hashlink_test_tests_linked_hash_set"
+    },
+    {
+      "name": "hashlink_test_tests_lru_cache"
+    },
+    {
+      "name": "keystore2_legacy_blobs_test"
+    },
     {
       "name": "keystore2_test"
     },
