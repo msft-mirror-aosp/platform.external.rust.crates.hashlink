@@ -2,9 +2,6 @@
 {
   "presubmit": [
     {
-      "name": "hashlink_test_src_lib"
-    },
-    {
       "name": "hashlink_test_tests_linked_hash_map"
     },
     {
@@ -24,9 +21,6 @@
     }
   ],
   "presubmit-rust": [
-    {
-      "name": "hashlink_test_src_lib"
-    },
     {
       "name": "hashlink_test_tests_linked_hash_map"
     },
