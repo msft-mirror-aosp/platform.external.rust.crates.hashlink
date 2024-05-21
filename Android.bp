@@ -45,7 +45,7 @@ rust_test {
     crate_name: "linked_hash_map",
     cargo_env_compat: true,
     cargo_pkg_version: "0.8.1",
-    srcs: ["tests/linked_hash_map.rs"],
+    crate_root: "tests/linked_hash_map.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -66,7 +66,7 @@ rust_test {
     crate_name: "linked_hash_set",
     cargo_env_compat: true,
     cargo_pkg_version: "0.8.1",
-    srcs: ["tests/linked_hash_set.rs"],
+    crate_root: "tests/linked_hash_set.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -87,7 +87,7 @@ rust_test {
     crate_name: "lru_cache",
     cargo_env_compat: true,
     cargo_pkg_version: "0.8.1",
-    srcs: ["tests/lru_cache.rs"],
+    crate_root: "tests/lru_cache.rs",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     test_options: {
@@ -108,7 +108,7 @@ rust_library {
     crate_name: "hashlink",
     cargo_env_compat: true,
     cargo_pkg_version: "0.8.1",
-    srcs: ["src/lib.rs"],
+    crate_root: "src/lib.rs",
     edition: "2018",
     rustlibs: ["libhashbrown"],
     apex_available: [
